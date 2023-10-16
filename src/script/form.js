@@ -15,7 +15,7 @@ export class Form {
   disabled = true
 
   submit = () => {
-    console.log(this.value)
+    // console.log(this.value)
   }
 
   change = (name, value) => {

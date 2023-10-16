@@ -8,7 +8,7 @@ class User {
   static #list = []
 
   constructor({ email, password, role }) {
-    this.email = email
+    this.email = String(email).toLowerCase()
     this.password = password
     this.role = User.#convertRole(role)
   }
@@ -36,6 +36,8 @@ class User {
   }
 
   static getByEmail(email) {
+    email = String(email).toLowerCase()
+
     return (
       this.#list.find((user) => user.email === email) ||
       null

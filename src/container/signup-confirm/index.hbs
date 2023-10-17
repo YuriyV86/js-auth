@@ -1,0 +1,26 @@
+<div class="page page--background">
+    <header>
+        {{> back-button}}
+    </header>
+
+    <form class="page__section">
+        <h1 class="page__title">Підтвердження реєстрації</h1>
+
+        <p class="page__subtitle">На вашу пошту надіслано код для підтвердження облікового запису. Введіть його сюди</p>
+
+        <div class="form">
+            <div class="form__item">
+                {{> field action='signupConfirmForm.change' name='code' label='Код' type='number' placeholder='Ваш
+                код'}}
+                <span name="code" class="form__error">Помилка</span>
+            </div>
+        </div>
+
+        <button onclick="signupConfirmForm.submit();" class="button button--disabled" type="button">Підтвердити</button>
+
+        <span class="alert alert--disabled">Увага, помилка!</span>
+
+        <span class="link__prefix">Загубили код? <a href="/signup-confirm" class="link" id="renew">Відправити
+                повторно</a> </span>
+    </form>
+</div>

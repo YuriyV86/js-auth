@@ -3,7 +3,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: s.space(3);
+  gap: s.space(6);
 
   &__item {
     display: flex;
@@ -77,4 +77,16 @@
   &--active {
     border-color: s.color(red) !important;
   }
+}
+
+.link {
+  color: s.color(main);
+
+  @include s.click;
+}
+
+.link__prefix {
+  color: s.color(light);
+
+  font-size: 12px;
 }

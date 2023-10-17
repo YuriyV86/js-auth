@@ -3,9 +3,6 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  // ↙️ cюди вводимо назву файлу з сontainer
   res.render('index', {
     // вказуємо назву контейнера
     name: 'index',
@@ -14,12 +11,40 @@ router.get('/', function (req, res) {
     component: [''],
 
     // вказуємо назву сторінки
-    title: 'Home page',
+    title: 'Index page',
 
-    // вказуємо дані,
     data: {},
   })
-  // ↑↑ сюди вводимо JSON дані
+})
+
+router.get('/home', function (req, res) {
+  res.render('home', {
+    // вказуємо назву контейнера
+    name: 'home',
+
+    // вказуємо назву компонентів
+    component: [''],
+
+    // вказуємо назву сторінки
+    title: 'Home page',
+
+    data: {},
+  })
+})
+
+router.get('/logout', function (req, res) {
+  res.render('logout', {
+    // вказуємо назву контейнера
+    name: 'logout',
+
+    // вказуємо назву компонентів
+    component: [''],
+
+    // вказуємо назву сторінки
+    title: 'Logout page',
+
+    data: {},
+  })
 })
 
 // Підключіть файли роутів

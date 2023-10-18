@@ -1,5 +1,3 @@
-console.clear()
-
 // Підключаємо технологію express для back-end сервера
 const express = require('express')
 // Cтворюємо роутер - місце, куди ми підключаємо ендпоїнти
@@ -15,6 +13,23 @@ User.create({
   role: 2,
 })
 
+User.create({
+  email: 'test2@email.email',
+  password: 123,
+  role: 2,
+})
+
+User.create({
+  email: 'test3@email.email',
+  password: 123,
+  role: 1,
+})
+
+User.create({
+  email: 'test4@email.email',
+  password: 123,
+  role: 3,
+})
 // ================================================================
 
 // router.get Створює нам один ентпоїнт
